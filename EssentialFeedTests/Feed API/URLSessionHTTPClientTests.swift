@@ -52,7 +52,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertNotNil(resultErrorFor(data: anyData(), response: nonHTTPURLResponse(), error: nil))
     }
 
-    func test_getFromURL_suceedsOnHTTPURLResponseWithData() {
+    func test_getFromURL_succeedsOnHTTPURLResponseWithData() {
         let data = anyData()
         let response = anyHTTPURLResponse()
 
@@ -63,7 +63,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(receivedValues?.response.statusCode, response.statusCode)
     }
 
-    func test_getFromURL_suceedsWithEmptyDataOnHTTPURLResponseWithNoData() {
+    func test_getFromURL_succeedsWithEmptyDataOnHTTPURLResponseWithNoData() {
         let response = anyHTTPURLResponse()
 
         let receivedValues = resultValuesFor(data: nil, response: response, error: nil)
